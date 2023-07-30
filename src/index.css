@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=JetBrains+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  font-family: "Poppins";
+}
+
+.monospaced-font {
+  font-family: "JetBrains Mono";
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  height: 100vh;
+}
+
+#root {
+  width: 100%;
+  max-width: 768px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+@layer components {
+  body {
+    @apply bg-neutral-950 text-neutral-300 overflow-auto
+  }
+  ::-webkit-scrollbar {
+    @apply w-2 h-2 bg-neutral-950 rounded-full
+  }
+  ::-webkit-scrollbar-thumb{
+    @apply rounded-full w-2 bg-neutral-800
+  }
+  ::-webkit-scrollbar-corner {
+    @apply bg-neutral-950
+  }
+  .scroll-lite::-webkit-scrollbar {
+    @apply bg-neutral-900
+  }
+  input[type=range] {
+    @apply appearance-none rounded-full bg-neutral-800 cursor-pointer
+  }
+  input[type=range]::-webkit-slider-thumb {
+    @apply appearance-none bg-emerald-600 focus:bg-emerald-600 h-3 w-3 scale-150 rounded-full
+  }
+}

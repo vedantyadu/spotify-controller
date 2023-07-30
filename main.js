@@ -21,7 +21,11 @@ function createWindow() {
     }
   })
 
-  // For production - win.loadFile('./dist/index.html')
+  /* 
+    For production - 
+    win.removeMenu()
+    win.loadFile('./dist/index.html') 
+  */
   win.loadURL('http://localhost:5173/')
 }
 

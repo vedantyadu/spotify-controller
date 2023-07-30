@@ -1,7 +1,7 @@
 # Spotify-Controller
 The Spotify desktop application does not support keybinds while the app is minimized. Spotify Controller is a desktop application that allows you to control the Spotify desktop application by using keybinds. It is built using React and electonjs and uses the Spotify API.   
    
-Download the Spotify Controller executable here 👉 [[Download](https://drive.google.com/file/d/1W9ABOhX0eBMwMUW5_8SG0nW7KK9YVxhK/view?usp=drive_link)]
+Download the Spotify Controller executable here 👉 [[Download](https://drive.google.com/file/d/18NLHPsRCbG7X-nZkPR3I9NggSi639z0d/view?usp=drive_link)]
 ## Developer setup
 - Run `npm install`.
 - Create `config.js` in [`/src/utils`](https://github.com/vedantyadu/spotify-controller/tree/master/src/utils) [[Example](#configjs-example)].

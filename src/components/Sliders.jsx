@@ -1,9 +1,20 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 function Sliders() {
 
-  const [seek, setSeek] = useState(localStorage.getItem('seek_duration') || 5)
-  const [volume, setVolume] = useState(localStorage.getItem('volume_increment') || 5)
+  const [seek, setSeek] = useState(localStorage.getItem('seek_duration'))
+  const [volume, setVolume] = useState(localStorage.getItem('volume_increment'))
+
+  useEffect(() => {
+    if (!seek) {
+      localStorage.setItem('seek_duration', 5)
+      setSeek(5)
+    }
+    if (!volume) {
+      localStorage.setItem('volume_increment', 5)
+      setVolume(5)
+    }
+  }, [])
 
   const handleSeek = (e) => {
     localStorage.setItem('seek_duration', e.target.value)

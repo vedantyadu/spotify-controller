@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Login from './components/Login'
 import PrivateRoute from './utils/PrivateRoute'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import AppContext from './context/AppContext'
 import Home from './components/Home'
 import axios from 'axios'

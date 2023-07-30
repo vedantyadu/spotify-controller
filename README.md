@@ -1,7 +1,7 @@
 # Spotify-Controller
-Spotify Controller is a desktop application that allows you to control the Spotify desktop application.   
-It is built using React and electonjs and uses the Spotify API.   
-Download spotify controller executable here 👉 [[Download link](https://drive.google.com/file/d/1W9ABOhX0eBMwMUW5_8SG0nW7KK9YVxhK/view?usp=drive_link)]
+The Spotify desktop application does not support keybinds while the app is minimized. Spotify Controller is a desktop application that allows you to control the Spotify desktop application by using keybinds. It is built using React and electonjs and uses the Spotify API.   
+   
+Download the Spotify Controller executable here 👉 [[Download](https://drive.google.com/file/d/1W9ABOhX0eBMwMUW5_8SG0nW7KK9YVxhK/view?usp=drive_link)]
 ## Developer setup
 - Run `npm install`.
 - Create `config.js` in [`/src/utils`](https://github.com/vedantyadu/spotify-controller/tree/master/src/utils) [[Example](#configjs-example)].
@@ -22,3 +22,7 @@ Building the app requires [`electron-packager`](https://www.npmjs.com/package/el
 - Build the Vite React app using `npm run build`.
 - Change all src or hrefs from `/` to `./` notation in `/dist/index.html` (Eg. `/assets/icon.ico` to `./assets/icon.ico`).
 - Package the electron app using `npx electron-packager . --overwrite --icon=./public/icon.ico`.
+
+## Limitation
+Presisting login using refresh token is not implemented in this version of the application.   
+After 1 hour the user has to relogin into the application.

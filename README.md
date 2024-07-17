@@ -1,15 +1,17 @@
-# Spotify-Controller
-The Spotify desktop application does not support keybinds while the app is minimized. Spotify Controller is a desktop application that allows you to control the Spotify desktop application by using keybinds. It is built using React and electonjs and uses the Spotify API.   
-   
-Download the Spotify Controller executable here 👉 [[Download](https://drive.google.com/file/d/18NLHPsRCbG7X-nZkPR3I9NggSi639z0d/view?usp=drive_link)]
-## Getting started
-- Run `npm install`.
-- Create `config.js` in [`/src/utils`](https://github.com/vedantyadu/spotify-controller/tree/master/src/utils) [[Example](#configjs-example)].
-- Create a webpage that redirects to the custom protocol URI [[Example](https://github.com/vedantyadu/spotify-controller-redirect)].
-- Run `npm run dev` on one terminal and `npm start` on another terminal.
+# Spotify Controller
+#### Spotify Controller is an app that allows you to control the Spotify desktop app via keybinds.   
 
-### `config.js` example
-```js  
+Spotify Controller does this using the Spotify API. The app is created using ElectronJS and React.
+   
+#### 🔗 [Download the executable](https://drive.google.com/file/d/18NLHPsRCbG7X-nZkPR3I9NggSi639z0d/view?usp=drive_link)
+## Getting started
+### Installing dependencies
+```bash
+npm install
+```
+### Setting up Spotify API credentials
+Create `config.js` in [`/src/utils`](https://github.com/vedantyadu/spotify-controller/tree/master/src/utils) with the following format :
+```js
 const cfg = {
   clientid: '<your-spotify-api-client-id>',
   redirectUri: '<your-redirect-webpage-url>'
@@ -17,9 +19,34 @@ const cfg = {
 
 export default cfg
 ```
+### Creating a redirection page
+Create a webpage that opens the **Spotify Controller** app upon redirection from the Spotify OAuth login screen using custom URL Protocol.   
+##### 🔗 [Example](https://github.com/vedantyadu/spotify-controller-redirect)
+
+### Starting the app in development mode
+#### Start the Vite server
+```bash
+npm run dev
+```
+#### Start the electron app
+```bash
+npm start
+```
+
 ## Building the app
-Building the app requires [`@electron/packager`](https://www.npmjs.com/package/electron-packager](https://www.npmjs.com/package/@electron/packager))  
-- Build the Vite React app using `npm run build`.
-- Change all src or hrefs from `/` to `./` notation in `/dist/index.html` (Eg. `/assets/icon.ico` to `./assets/icon.ico`).
-- Replace `win.loadURL('http://localhost:5173/')` in the `createWindow` function in [`main.js`](https://github.com/vedantyadu/spotify-controller/blob/master/main.js) with `win.loadFile('./dist/index.html')`.
-- Package the electron app using `npx electron-packager . --overwrite --icon=./public/icon.ico`.
+### Building the Vite React app
+```bash
+npm run build
+```
+### Changing the link notations
+Change all src or hrefs from `/` to `./` notation in `/dist/index.html`.   
+Example - `/assets/icon.ico` to `./assets/icon.ico`.
+
+### Changing the app URL in the Electron app
+Replace `win.loadURL('http://localhost:5173/')` in the `createWindow` function in [`main.js`](https://github.com/vedantyadu/spotify-controller/blob/master/main.js) with `win.loadFile('./dist/index.html')`.
+
+### Pack the Electron app
+Building the app requires [`@electron/packager`](https://www.npmjs.com/package/@electron/packager)    
+```bash
+npx @electron/packager . --overwrite --icon=./public/icon.ico
+```

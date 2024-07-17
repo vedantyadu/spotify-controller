@@ -23,7 +23,3 @@ Building the app requires [`electron-packager`](https://www.npmjs.com/package/el
 - Change all src or hrefs from `/` to `./` notation in `/dist/index.html` (Eg. `/assets/icon.ico` to `./assets/icon.ico`).
 - Replace `win.loadURL('http://localhost:5173/')` in the `createWindow` function in [`main.js`](https://github.com/vedantyadu/spotify-controller/blob/master/main.js) with `win.loadFile('./dist/index.html')`.
 - Package the electron app using `npx electron-packager . --overwrite --icon=./public/icon.ico`.
-
-## Known limitation(s)
-Presisting login using refresh token is not implemented in this version of the application.   
-After 1 hour the user has to relogin into the application.

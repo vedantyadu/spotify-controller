@@ -18,7 +18,7 @@ const cfg = {
 export default cfg
 ```
 ## Building the app
-Building the app requires [`electron-packager`](https://www.npmjs.com/package/electron-packager)   
+Building the app requires [`@electron/packager`]([https://www.npmjs.com/package/electron-packager](https://www.npmjs.com/package/@electron/packager))   
 - Build the Vite React app using `npm run build`.
 - Change all src or hrefs from `/` to `./` notation in `/dist/index.html` (Eg. `/assets/icon.ico` to `./assets/icon.ico`).
 - Replace `win.loadURL('http://localhost:5173/')` in the `createWindow` function in [`main.js`](https://github.com/vedantyadu/spotify-controller/blob/master/main.js) with `win.loadFile('./dist/index.html')`.

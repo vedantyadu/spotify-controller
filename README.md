@@ -4,6 +4,10 @@
 Spotify Controller does this using the Spotify API. The app is created using ElectronJS and React.
    
 #### 🔗 [Download the executable](https://drive.google.com/file/d/18NLHPsRCbG7X-nZkPR3I9NggSi639z0d/view?usp=drive_link)
+
+## Screenshots
+![App](./screenshots/app.png)
+
 ## Getting started
 ### Installing dependencies
 ```bash
